@@ -57,7 +57,10 @@ app.post("/login", (req, res) => {
 app.get("/", (req, res) => {
   res.send("Server is running. Use POST /signup to register.");
 });
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
-app.listen(8081, () => {
-  console.log("Server running on http://localhost:8081");
+
+//app.listen(8081, () => {
+ // console.log("Server running on http://localhost:8081");
 });
